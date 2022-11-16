@@ -1,0 +1,175 @@
+<html>
+  <head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <style>
+      * {
+       font-family: 'Roboto', monospace;
+       font-weight: lighter;
+      }
+      body {
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@900&family=Roboto:wght@100&display=swap');
+   color: white;
+   background-color: 
+#363940;
+}
+  .scr {
+    position:relative;margin:auto;width:100%
+  }
+#container {display:flex; flex-direction: column; align-items: left; justify-content: center; margin: 4vh 10vw;text-align:left;background-color:#00000077;padding:6vw;padding-top:0;margin-top:0
+}
+#discord-bot-typescript-template{display:flex;flex-direction:column;align-items:center;font-size:2.25rem;padding:4vh;padding-bottom:0}
+</style></head><body><div id="container" style=""><h1 id="discord-bot-typescript-template" style="">Discord Bot TypeScript Template<br><span><p><a href="https://discord.js.org/"><img src="https://img.shields.io/github/package-json/dependency-version/KevinNovak/Discord-Bot-TypeScript-Template/discord.js" alt="discord.js"></a>
+<a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue" alt="License"></a>
+<a href="https://github.com/KevinNovak/Discord-Bot-TypeScript-Template/stargazers"><img src="https://img.shields.io/github/stars/KevinNovak/Discord-Bot-TypeScript-Template.svg" alt="Stars"></a>
+<a href="https://github.com/KevinNovak/Discord-Bot-TypeScript-Template/pulls"><img src="https://img.shields.io/badge/Pull%20Requests-Welcome!-brightgreen" alt="Pull Requests"></a></p></span></h1>
+
+<p><strong>Discord bot</strong> - A discord.js bot template written with TypeScript.</p>
+<h2 id="introduction">Introduction</h2>
+<p>This template was created to give developers a starting point for new Discord bots, so that much of the initial setup can be avoided and developers can instead focus on meaningful bot features. Developers can simply copy this repo, follow the <a href="#setup">setup instructions</a> below, and have a working bot with many <a href="#features">boilerplate features</a> already included!</p>
+<p>For help using this template, feel free to <a href="https://discord.gg/Vyf6fEWbVr">join our support server</a>!</p>
+<p><a href="https://discord.gg/Vyf6fEWbVr"><img src="https://discord.com/api/guilds/660711235766976553/widget.png?style=shield" alt="Discord Shield"></a></p>
+<h2 id="features">Features</h2>
+<h3 id="built-in-bot-features-">Built-In Bot Features:</h3>
+<ul>
+<li>Basic command structure.</li>
+<li>Rate limits and command cooldowns.</li>
+<li>Welcome message when joining a server.</li>
+<li>Shows server count in bot status.</li>
+<li>Posts server count to popular bot list websites.</li>
+<li>Support for multiple languages.</li>
+</ul>
+<h3 id="developer-friendly-">Developer Friendly:</h3>
+<ul>
+<li>Written with TypeScript.</li>
+<li>Uses the <a href="https://discord.js.org/">discord.js</a> framework.</li>
+<li>Built-in debugging setup for VSCode.</li>
+<li>Written with <a href="https://nodejs.org/api/esm.html#introduction">ESM</a> for future compatibility with packages.</li>
+<li>Support for running with the <a href="https://pm2.keymetrics.io/">PM2</a> process manger.</li>
+<li>Support for running with <a href="https://www.docker.com/">Docker</a>.</li>
+</ul>
+<h3 id="scales-as-your-bot-grows-">Scales as Your Bot Grows:</h3>
+<ul>
+<li>Supports <a href="https://discordjs.guide/sharding/">sharding</a> which is required when your bot is in 2500+ servers.</li>
+<li>Supports <a href="https://github.com/KevinNovak/Discord-Bot-TypeScript-Template-Master-Api">clustering</a> which allows you to run your bot on multiple machines.</li>
+</ul>
+<h2 id="commands">Commands</h2>
+<p>This bot has a few example commands which can be modified as needed.</p>
+<h3 id="help-command">Help Command</h3>
+<p>A <code>/help</code> command to get help on different areas of the bot, like commands or permissions:</p>
+<p><img class="scr" src="https://i.imgur.com/HKDtdWL.png" alt="">
+<img class="scr" src="https://i.imgur.com/M67wCJK.png" alt="">
+<img class="scr" src="https://i.imgur.com/N86WW9s.png" alt=""></p>
+<h3 id="info-command">Info Command</h3>
+<p>A <code>/info</code> command to get information about the bot, links to different resources, or developer information.</p>
+<p><img class="scr" src="https://i.imgur.com/83BEMBS.png" alt="">
+<img class="scr" src="https://i.imgur.com/I1bPcNM.png" alt=""></p>
+<h3 id="test-command">Test Command</h3>
+<p>A generic command, <code>/test</code>, which can be copied to create additional commands.</p>
+<p><img class="scr" src="https://i.imgur.com/HxzgUO7.png" alt=""></p>
+<h3 id="welcome-message">Welcome Message</h3>
+<p>A welcome message is sent to the server and owner when the bot is added.</p>
+<p><img class="scr" src="https://i.imgur.com/75UrFXf.png" alt=""></p>
+<h2 id="setup">Setup</h2>
+<ol>
+<li>Copy example config files.<ul>
+<li>Navigate to the <code>config</code> folder of this project.</li>
+<li>Copy all files ending in <code>.example.json</code> and remove the <code>.example</code> from the copied file names.<ul>
+<li>Ex: <code>config.example.json</code> should be copied and renamed as <code>config.json</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Obtain a bot token.<ul>
+<li>You'll need to create a new bot in your <a href="https://discord.com/developers/applications/">Discord Developer Portal</a>.<ul>
+<li>See <a href="https://www.writebots.com/discord-bot-token/">here</a> for detailed instructions.</li>
+<li>At the end you should have a <strong>bot token</strong>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Modify the config file.<ul>
+<li>Open the <code>config/config.json</code> file.</li>
+<li>You'll need to edit the following values:<ul>
+<li><code>client.id</code> - Your discord bot's <a href="https://techswift.org/2020/04/22/how-to-find-your-user-id-on-discord/">user ID</a>.</li>
+<li><code>client.token</code> - Your discord bot's token.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Install packages.<ul>
+<li>Navigate into the downloaded source files and type <code>npm install</code>.</li>
+</ul>
+</li>
+<li>Register commands.<ul>
+<li>In order to use slash commands, they first <a href="https://discordjs.guide/interactions/slash-commands.html#registering-slash-commands">have to be registered</a>.</li>
+<li>Type <code>npm run commands:register</code> to register the bot's commands.<ul>
+<li>Run this script any time you change a command name, structure, or add/remove commands.</li>
+<li>This is so Discord knows what your commands look like.</li>
+<li>It may take up to an hour for command changes to appear.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="start-scripts">Start Scripts</h2>
+<p>You can run the bot in multiple modes:</p>
+<ol>
+<li>Normal Mode<ul>
+<li>Type <code>npm start</code>.</li>
+<li>Starts a single instance of the bot.</li>
+</ul>
+</li>
+<li>Manager Mode<ul>
+<li>Type <code>npm run start:manager</code>.</li>
+<li>Starts a shard manager which will spawn multiple bot shards.</li>
+</ul>
+</li>
+<li>PM2 Mode<ul>
+<li>Type <code>npm run start:pm2</code>.</li>
+<li>Similar to Manager Mode but uses <a href="https://pm2.keymetrics.io/">PM2</a> to manage processes.</li>
+</ul>
+</li>
+</ol>
+<h2 id="bots-using-this-template">Bots Using This Template</h2>
+<p>A list of Discord bots using this template.</p>
+<table>
+<thead>
+<tr>
+<th>Bot</th>
+<th>Servers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://top.gg/bot/656621136808902656">Birthday Bot</a></td>
+<td><img src="https://top.gg/api/widget/servers/656621136808902656.svg" alt=""></td>
+</tr>
+<tr>
+<td><a href="https://top.gg/bot/713586207119900693">QOTD Bot</a></td>
+<td><img src="https://top.gg/api/widget/servers/713586207119900693.svg" alt=""></td>
+</tr>
+<tr>
+<td><a href="https://top.gg/bot/471091072546766849">Friend Time</a></td>
+<td><img src="https://top.gg/api/widget/servers/471091072546766849.svg" alt=""></td>
+</tr>
+<tr>
+<td><a href="https://top.gg/bot/787041583580184609">Bento</a></td>
+<td><img src="https://top.gg/api/widget/servers/787041583580184609.svg" alt=""></td>
+</tr>
+<tr>
+<td><a href="https://top.gg/bot/902249456072818708">NFT-Info</a></td>
+<td><img src="https://top.gg/api/widget/servers/902249456072818708.svg" alt=""></td>
+</tr>
+<tr>
+<td><a href="https://top.gg/bot/929527099922993162">Skylink-IF</a></td>
+<td><img src="https://top.gg/api/widget/servers/929527099922993162.svg" alt=""></td>
+</tr>
+<tr>
+<td><a href="https://github.com/topcoder-platform/tc-discord-bot">Topcoder TC-101</a></td>
+</tr>
+</tbody>
+</table>
+<p>Don't see your bot listed? <a href="https://discord.gg/Vyf6fEWbVr">Contact us</a> to have your bot added!</p></div>
+</body></html>
